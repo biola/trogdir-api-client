@@ -19,6 +19,7 @@ module Trogdir
     autoload :Emails, 'trogdir/api_client/emails'
     autoload :Phones, 'trogdir/api_client/phones'
     autoload :Photos, 'trogdir/api_client/photos'
+    autoload :Addresses, 'trogdir/api_client/addresses'
   end
 end
 
