@@ -20,6 +20,7 @@ module Trogdir
     autoload :Phones, 'trogdir/api_client/phones'
     autoload :Photos, 'trogdir/api_client/photos'
     autoload :Addresses, 'trogdir/api_client/addresses'
+    autoload :ChangeSyncs, 'trogdir/api_client/change_syncs'
   end
 end
 
