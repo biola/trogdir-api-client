@@ -1,4 +1,4 @@
-Trogdir API Client
+Trogdir API Client [![Build Status](https://travis-ci.org/biola/trogdir-api-client.svg?branch=master)](https://travis-ci.org/biola/trogdir-api-client)
 ==================
 
 Installing
