@@ -11,35 +11,37 @@ module Weary
       end
 
       def call(env)
-        request = Rack::Request.new(env)
-        @app.call signed_env_for_weary(env)
+        set_content_type! env
+        sign! env
+        @app.call env
       end
 
       private
 
       attr_reader :access_id, :secret_key
 
-      def env_for_signing(env)
-        env.dup.tap do |new_env|
+      def set_content_type!(env)
+        env.tap do |e|
           # Weary::Middleware::ContentType is dynamically injected after
           # this middleware is called and since Content-Type is used to
-          # sign HMAC signatures, we have to set it before signing it.
-          if ['POST', 'PUT'].include? env['REQUEST_METHOD']
-            new_env.update 'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+          # sign HMAC signatures, we have to mimic that behavior so that
+          # there's no difference in the headers when it's authenticated.
+          if ['POST', 'PUT'].include? e['REQUEST_METHOD']
+            e.update 'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
           end
         end
       end
 
       def signed_request(env)
-        Rack::Request.new(env_for_signing(env)).tap do |r|
+        Rack::Request.new(env).tap do |r|
           ApiAuth.sign! r, access_id, secret_key
         end
       end
 
-      def signed_env_for_weary(env)
+      def sign!(env)
         req = signed_request(env)
 
-        env.dup.tap do |e|
+        env.tap do |e|
           # Weary wants all headers to be in HTTP_[UPCASE] format for Rack env compatibility
           e.update(
             'HTTP_AUTHORIZATION' => req.env['Authorization'],
