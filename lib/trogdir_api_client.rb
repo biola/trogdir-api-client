@@ -15,6 +15,7 @@ end
 module Trogdir
   module APIClient
     autoload :People, 'trogdir/api_client/people'
+    autoload :IDs, 'trogdir/api_client/ids'
   end
 end
 
