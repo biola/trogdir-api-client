@@ -48,7 +48,7 @@ hashes.each do |hash|
   begin
     person = Person.find(person_id)
 
-    case scppe
+    case scope
     when 'person'
       case action
       when 'create'
