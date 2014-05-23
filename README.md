@@ -6,6 +6,23 @@ Installing
 
 Add `gem 'trogdir_api_client'` to your `Gemfile` and run `bundle`
 
+Configuration
+-------------
+
+```ruby
+TrogdirAPIClient.configure do |config|
+  # Optional:
+  # config.scheme = 'http'
+  # config.host = 'localhost'
+  # config.script_name = nil
+  # config.version = 'v1'
+  
+  # Required:
+  config.access_id = '**************'
+  config.secret_key = '*****************************************'
+end
+```
+
 Usage
 -----
 
@@ -14,15 +31,6 @@ Usage
 ```ruby
 require 'trogdir_api_client'
 require 'multi_json'
-
-TrogdirAPIClient.configure do |config|
-  # config.scheme = 'http'
-  # config.host = 'localhost'
-  # config.script_name = nil
-  # config.version = 'v1'
-  config.access_id = '**************'
-  config.secret_key = '*****************************************'
-end
 
 trogdir = Trogdir::APIClient::ChangeSyncs.new
 hashes = trogdir.start.perform.parse
