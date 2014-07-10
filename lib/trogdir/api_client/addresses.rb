@@ -1,8 +1,7 @@
 module Trogdir
   module APIClient
     class Addresses < Weary::Client
-      domain TrogdirAPIClient.config.base_url
-      use Weary::Middleware::HMACAuth, [TrogdirAPIClient.config.credentials]
+      include Settings
 
       get :index, '/people/{uuid}/addresses'
 

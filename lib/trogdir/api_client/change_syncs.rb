@@ -1,8 +1,7 @@
 module Trogdir
   module APIClient
     class ChangeSyncs < Weary::Client
-      domain TrogdirAPIClient.config.base_url
-      use Weary::Middleware::HMACAuth, [TrogdirAPIClient.config.credentials]
+      include Settings
 
       put :start, '/change_syncs/start'
 
