@@ -28,4 +28,8 @@ module Weary
   module Middleware
     autoload :HMACAuth, 'weary/middleware/hmac_auth'
   end
+
+  module Adapter
+    autoload :NetHttpAdvanced, 'weary/adapters/net_http_advanced'
+  end
 end
