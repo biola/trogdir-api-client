@@ -2,7 +2,7 @@ module Trogdir
   module APIClient
     class People < Weary::Client
       domain TrogdirAPIClient.config.base_url
-      # use Weary::Middleware::ContentType
+      adapter Weary::Adapter::NetHttpAdvanced
       use Weary::Middleware::HMACAuth, [TrogdirAPIClient.config.credentials]
 
       get :index, '/people' do |resource|
