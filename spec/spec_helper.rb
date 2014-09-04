@@ -4,6 +4,7 @@ $:.unshift File.expand_path(File.dirname(__FILE__))
 ENV['RACK_ENV'] = 'test'
 
 require 'bundler/setup'
+require 'oj'
 require 'rspec'
 require 'webmock/rspec'
 require 'factory_girl'

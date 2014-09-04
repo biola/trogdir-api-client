@@ -22,6 +22,7 @@ module Trogdir
     autoload :Photos, 'trogdir/api_client/photos'
     autoload :Addresses, 'trogdir/api_client/addresses'
     autoload :ChangeSyncs, 'trogdir/api_client/change_syncs'
+    autoload :Groups, 'trogdir/api_client/groups'
   end
 end
 

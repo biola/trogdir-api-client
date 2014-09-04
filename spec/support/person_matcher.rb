@@ -15,6 +15,7 @@ RSpec::Matchers.define :be_a_person do |expected|
         :floor,
         :full_time,
         :gender,
+        :groups,
         :ids,
         :last_name,
         :majors,
