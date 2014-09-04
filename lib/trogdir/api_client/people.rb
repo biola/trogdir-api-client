@@ -18,7 +18,7 @@ module Trogdir
         resource.optional(
           :preferred_name, :middle_name, :display_name, # Names
           :gender, :partial_ssn, :birth_date,           # Demographic
-          :entitlements, :affiliations,                 # Groups and permissions
+          :entitlements, :affiliations, :groups,        # Groups and permissions
 
           # STUDENT INFO #
           :residence, :floor, :wing,  # On-Campus Residence
@@ -34,7 +34,7 @@ module Trogdir
         resource.optional(
           :first_name, :last_name, :preferred_name, :middle_name, :display_name,  # Names
           :gender, :partial_ssn, :birth_date,                                     # Demographic
-          :entitlements, :affiliations,                                           # Groups and permissions
+          :entitlements, :affiliations, :groups,                                  # Groups and permissions
 
           # STUDENT INFO #
           :residence, :floor, :wing,  # On-Campus Residence
