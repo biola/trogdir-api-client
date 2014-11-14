@@ -3,7 +3,9 @@ module Trogdir
     class ChangeSyncs < Weary::Client
       include Settings
 
-      put :start, '/change_syncs/start'
+      put :start, '/change_syncs/start' do |resource|
+        resource.optional :limit
+      end
 
       put :error, '/change_syncs/error/{sync_log_id}' do |resource|
         resource.required :message
