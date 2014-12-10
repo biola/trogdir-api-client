@@ -7,6 +7,8 @@ module Trogdir
         resource.optional :limit
       end
 
+      put :start_one, '/change_syncs/start/{changeset_id}'
+
       put :error, '/change_syncs/error/{sync_log_id}' do |resource|
         resource.required :message
       end
