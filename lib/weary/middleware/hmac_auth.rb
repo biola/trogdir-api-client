@@ -28,6 +28,8 @@ module Weary
           # there's no difference in the headers when it's authenticated.
           if ['POST', 'PUT'].include? e['REQUEST_METHOD']
             e.update 'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+          elsif e['REQUEST_METHOD'] == 'GET' && e['CONTENT_TYPE'].blank?
+            e.update 'CONTENT_TYPE' => 'text/plain'
           end
         end
       end
