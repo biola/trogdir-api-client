@@ -21,9 +21,9 @@ module Trogdir
           :entitlements, :affiliations, :groups,        # Groups and permissions
 
           # STUDENT INFO #
-          :residence, :floor, :wing,  # On-Campus Residence
-          :majors,                    # Academic
-          :privacy,                   # FERPA
+          :residence, :floor, :wing, :mailbox, # On-Campus Residence
+          :majors, :minors,                    # Academic
+          :privacy,                            # FERPA
 
           # EMPLOYEE INFO #
           :department, :title, :employee_type, :full_time, :pay_type
@@ -37,9 +37,9 @@ module Trogdir
           :entitlements, :affiliations, :groups,                                  # Groups and permissions
 
           # STUDENT INFO #
-          :residence, :floor, :wing,  # On-Campus Residence
-          :majors,                    # Academic
-          :privacy,                   # FERPA
+          :residence, :floor, :wing, :mailbox, # On-Campus Residence
+          :majors, :minors,                    # Academic
+          :privacy,                            # FERPA
 
           # EMPLOYEE INFO #
           :department, :title, :employee_type, :full_time, :pay_type
