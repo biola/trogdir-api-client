@@ -17,6 +17,7 @@ RSpec::Matchers.define :be_a_person do |expected|
         :gender,
         :groups,
         :ids,
+        :job_ct,
         :last_name,
         :mailbox,
         :majors,
