@@ -14,7 +14,7 @@ spec = Gem::Specification.new do |s|
   s.email = 'adam.crownoble@biola.edu'
   s.homepage = 'https://github.com/biola/trogdir-api-client'
   s.license = 'MIT'
-  s.add_dependency 'api-auth', '~> 1.0'
+  s.add_dependency 'api-auth', '~> 1.3.1'
   s.add_dependency 'weary', '~> 1.0'
   s.add_development_dependency 'rspec', '~> 2.14'
   s.add_development_dependency 'webmock', '~> 1.17'
