@@ -26,7 +26,7 @@ module Trogdir
           :privacy,                            # FERPA
 
           # EMPLOYEE INFO #
-          :department, :title, :employee_type, :full_time, :pay_type
+          :department, :title, :employee_type, :full_time, :pay_type, :job_ct
         )
       end
 
@@ -42,7 +42,7 @@ module Trogdir
           :privacy,                            # FERPA
 
           # EMPLOYEE INFO #
-          :department, :title, :employee_type, :full_time, :pay_type
+          :department, :title, :employee_type, :full_time, :pay_type, :job_ct
         )
       end
     end
