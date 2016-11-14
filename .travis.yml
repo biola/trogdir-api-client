@@ -1,14 +1,15 @@
 language: ruby
 cache: bundler
 rvm:
-- 1.9.3
-- 2.0.0
-- 2.1.0
-- 2.1.4
+- 2.1.6
 services:
 - mongodb
 script: bundle exec rspec
-notifications:
-  hipchat:
-    rooms:
-      secure: SQs42VFZ9UgDlGXsINSxKOeusoawJvB1RC5eWskE260H/6OcA/gRNQ0wNYAU5VcVzg1oPKUbyuTKTQySjpkgyPqJFe5kh85OzFAyw7uJ2/p3mJKgvJ+C5YWTIo2Wg4N8Zk4VfTtyyL5OLvqbuMiafVjUJoirVw/Lk/N4FJ9VSGk=
+deploy:
+  provider: rubygems
+  api_key:
+    secure: "XvDcAbSXTu83v1BIrqakUKIfjUZFHQHTpoSoEeWXzAJ7g+jpbY1hm7yAxyWlMFs/zKS7BuDuQTV8qydcbVqPdrjr9TITkka6U/m85r5AlynlC7pFfAg7Vw7VXs4MLi6eITA/+hLKT49mdZx5NC0Jm4Pv/YtmUAQ8RiUwv8h5DhI="
+  gem: trogdir_api_client
+  on:
+    tags: true
+    rvm: 2.1.6
