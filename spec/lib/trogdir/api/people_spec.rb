@@ -24,6 +24,11 @@ describe Trogdir::APIClient::People do
       let(:method_call) { client.index affiliation: 'student' }
       its(:length) { should eql 1 }
     end
+
+    context 'with page and per_page args' do
+      let(:method_call) { client.index page: 1, per_page: 10 }
+      its(:length) { should eql 2 }
+    end
   end
 
   describe '#show' do

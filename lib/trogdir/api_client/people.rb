@@ -4,7 +4,7 @@ module Trogdir
       include Settings
 
       get :index, '/people' do |resource|
-        resource.optional :affiliation
+        resource.optional :affiliation, :page, :per_page
       end
 
       get :show, '/people/{uuid}'
