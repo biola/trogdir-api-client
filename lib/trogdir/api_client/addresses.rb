@@ -13,7 +13,8 @@ module Trogdir
       end
 
       put :update, '/people/{uuid}/addresses/{address_id}' do |resource|
-        resource.optional :type, :street_1, :street_2, :city, :state, :zip, :country
+        resource.optional :type, :street_1, :street_2, :city, :state, :zip,
+                          :country
       end
 
       delete :destroy, '/people/{uuid}/addresses/{address_id}'

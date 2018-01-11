@@ -32,9 +32,12 @@ module Trogdir
 
       put :update, '/people/{uuid}' do |resource|
         resource.optional(
-          :first_name, :last_name, :preferred_name, :middle_name, :display_name,  # Names
-          :gender, :partial_ssn, :birth_date,                                     # Demographic
-          :entitlements, :affiliations, :groups,                                  # Groups and permissions
+          # Names
+          :first_name, :last_name, :preferred_name, :middle_name, :display_name,
+          # Demographic
+          :gender, :partial_ssn, :birth_date,
+          # Groups and permissions
+          :entitlements, :affiliations, :groups,
 
           # STUDENT INFO #
           :residence, :floor, :wing, :mailbox, # On-Campus Residence

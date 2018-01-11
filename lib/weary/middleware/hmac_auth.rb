@@ -3,7 +3,6 @@ require 'api_auth'
 module Weary
   module Middleware
     class HMACAuth
-
       def initialize(app, config = {})
         @app = app
         @access_id = config[:access_id]
@@ -44,7 +43,8 @@ module Weary
         req = signed_request(env)
 
         env.tap do |e|
-          # Weary wants all headers to be in HTTP_[UPCASE] format for Rack env compatibility
+          # Weary wants all headers to be in HTTP_[UPCASE] format for Rack env
+          # compatibility
           e.update(
             'HTTP_AUTHORIZATION' => req.env['Authorization'],
             'HTTP_DATE' => req.env['DATE']

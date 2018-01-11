@@ -9,7 +9,11 @@ module Weary
         connection = socket(request)
         connection.read_timeout = timeout unless timeout.nil?
         response = connection.request prepare(request)
-        Rack::Response.new response.body || "", response.code, normalize_response(response.to_hash)
+        Rack::Response.new(
+          response.body || '',
+          response.code,
+          normalize_response(response.to_hash)
+        )
       end
     end
   end
