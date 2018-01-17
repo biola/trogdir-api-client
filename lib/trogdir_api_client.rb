@@ -14,15 +14,16 @@ end
 
 module Trogdir
   module APIClient
-    autoload :Settings, 'trogdir/api_client/settings'
-    autoload :People, 'trogdir/api_client/people'
-    autoload :IDs, 'trogdir/api_client/ids'
-    autoload :Emails, 'trogdir/api_client/emails'
-    autoload :Phones, 'trogdir/api_client/phones'
-    autoload :Photos, 'trogdir/api_client/photos'
+    autoload :Accounts, 'trogdir/api_client/accounts'
     autoload :Addresses, 'trogdir/api_client/addresses'
     autoload :ChangeSyncs, 'trogdir/api_client/change_syncs'
+    autoload :Emails, 'trogdir/api_client/emails'
     autoload :Groups, 'trogdir/api_client/groups'
+    autoload :IDs, 'trogdir/api_client/ids'
+    autoload :People, 'trogdir/api_client/people'
+    autoload :Phones, 'trogdir/api_client/phones'
+    autoload :Photos, 'trogdir/api_client/photos'
+    autoload :Settings, 'trogdir/api_client/settings'
   end
 end
 
