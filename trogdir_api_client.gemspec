@@ -16,7 +16,7 @@ spec = Gem::Specification.new do |s|
   s.license = 'MIT'
   # After all of the syncinators are using 2.0 bump this to '~> 2.0'
   s.add_dependency 'api-auth', '>= 1.3'
-  s.add_dependency 'weary', '~> 1.0'
+  s.add_dependency 'weary'
   s.add_development_dependency 'rspec', '~> 2.14'
   s.add_development_dependency 'webmock', '~> 1.17'
   s.add_development_dependency 'factory_girl', '~> 4.4'
